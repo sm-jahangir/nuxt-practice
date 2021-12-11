@@ -31,17 +31,8 @@
             </div>
             <div class="card-body">
               <ul>
-                <li>
-                  <a href="">List 1</a>
-                </li>
-                <li>
-                  <a href="">List 1</a>
-                </li>
-                <li>
-                  <a href="">List 1</a>
-                </li>
-                <li>
-                  <a href="">List 1</a>
+                <li v-for="category in categories" :key="category.id">
+                  <a href="/users">{{ category.name }}</a>
                 </li>
               </ul>
             </div>
@@ -55,7 +46,8 @@ import axios from 'axios'
 export default {
     async asyncData({ $axios }) {
     const posts = await $axios.$get(`http://localhost/laravel/mini-blog/api/posts`)
-    return { posts }
+    const categories = await $axios.$get(`http://localhost/laravel/mini-blog/api/category`)
+    return { posts, categories }
   }
 }
 </script>
