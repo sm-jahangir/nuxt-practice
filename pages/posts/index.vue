@@ -32,7 +32,9 @@
             <div class="card-body">
               <ul>
                 <li v-for="category in categories" :key="category.id">
-                  <a href="/users">{{ category.name }}</a>
+                  <NuxtLink :to="{ name: 'posts-categories-slug', params: { slug: category.slug } }">
+                   {{ category.name }}
+                  </NuxtLink>
                 </li>
               </ul>
             </div>
