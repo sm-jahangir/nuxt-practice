@@ -1,6 +1,6 @@
 <template lang="">
-      <div class="text-center bg-light">
-        <h1>Footer Part</h1>
+      <div class="text-center bg-light mt-2">
+        <p class="p-3">2021 © All rights reserved by <strong>Jahangir Alam</strong></p>
     </div>
 </template>
 <script>
